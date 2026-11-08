@@ -250,6 +250,122 @@ table.t td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:to
 .cklist input{width:22px;height:22px;flex:none;margin-top:2px}
 @media(min-width:900px){ main{padding:20px 24px 32px} }
 
+/* ===== regras de uso ===== */
+.rulebox{margin-top:10px;border-radius:var(--r-sm);padding:10px 12px;font-size:14px}
+.rulebox.early{background:var(--amber-soft);border:1px solid var(--amber)}
+.rulebox.early>b{display:block;color:var(--amber);margin-bottom:2px}
+.rulebox.due{background:var(--ok-soft);color:var(--ok)}
+.rulebox .field{margin:8px 0 0}
+.rulebox label.ck{display:flex;gap:8px;align-items:center;margin-top:8px;cursor:pointer}
+.rulebox label.ck input{width:20px;height:20px}
+.rl{display:grid;grid-template-columns:minmax(0,1fr) 78px 96px;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.rl:last-child{border-bottom:0}
+.rl input,.rl select{min-height:42px;padding:8px}
+.rl .title{font-weight:600}
+
+/* ===== dashboard ===== */
+.wrap.wide{max-width:1180px}
+.dashlink{display:flex;align-items:center;gap:12px;width:100%;margin-top:10px;background:var(--head);color:#fff;border:0;border-left:8px solid var(--yellow);border-radius:var(--r);padding:12px 14px;cursor:pointer;text-align:left}
+.dashlink svg{width:26px;height:26px;color:var(--yellow);flex:none}
+.dashlink span{flex:1}.dashlink small{display:block;opacity:.8;font-size:13px}
+.dhead{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.dhead h2{margin:0}
+.presbtn{background:var(--head);color:#fff;border-color:var(--head)}
+.presbtn svg{color:var(--yellow)}
+.dbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.dbar .filters{margin:0;padding:2px 0;flex:1 1 300px}
+.dbar select{width:auto;min-height:40px;padding:6px 10px;max-width:100%}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+@media(min-width:760px){.kpis{grid-template-columns:repeat(4,1fr)}}
+.kpi{background:var(--surface);padding:14px 16px;border-top:5px solid var(--yellow)}
+.kpi b{display:block;font-size:34px;font-weight:750;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.05}
+.kpi span{display:block;font-size:14px;font-weight:600;margin-top:2px}
+.kpi small{display:block;font-size:12.5px;color:var(--muted)}
+.dgrid{display:grid;gap:12px;margin-top:12px}
+@media(min-width:900px){.dgrid{grid-template-columns:1fr 1fr}.dgrid .span2{grid-column:1/-1}}
+.dpanel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;min-width:0}
+.dpanel h3{margin:0;font-size:16.5px;letter-spacing:-.01em}
+.dpanel .lead{margin:2px 0 14px;font-size:13.5px;color:var(--muted)}
+.cols{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:6px;height:210px}
+.cols .c{display:flex;flex-direction:column;min-width:0}
+.cols .bw{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;min-height:0}
+.cols .bw i{display:block;width:100%;max-width:46px;background:var(--yellow);border-radius:5px 5px 0 0}
+.cols .bw em{font-style:normal;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;margin-bottom:3px;white-space:nowrap}
+.cols .c>span{font-size:11.5px;color:var(--muted);text-align:center;margin-top:5px;border-top:2px solid var(--line);padding-top:4px}
+.cols .c.out .bw i{opacity:.35}
+.cols .c.now>span{color:var(--ink);font-weight:700;border-top-color:var(--ink)}
+.hb{display:flex;flex-direction:column;gap:10px}
+.hb .r{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 10px;font-size:14px}
+.hb .l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hb .v{font-weight:700;font-variant-numeric:tabular-nums}
+.hb .t{grid-column:1/-1;height:10px;background:var(--surface2);border-radius:99px;overflow:hidden}
+.hb .t i{display:block;height:100%;background:var(--yellow);border-radius:99px}
+.hb.red .t i{background:var(--red)}.hb.blue .t i{background:var(--blue)}
+.statrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.statrow:last-child{margin-bottom:0}
+.stat{border-left:5px solid var(--line);padding:2px 0 2px 10px;min-width:0}
+.stat b{display:block;font-size:26px;font-weight:750;font-variant-numeric:tabular-nums;line-height:1.1;letter-spacing:-.02em}
+.stat span{display:block;font-size:13px;color:var(--muted)}
+.stat.red{border-color:var(--red)}.stat.red b{color:var(--red)}
+.stat.amber{border-color:var(--yellow)}
+.stat.ok{border-color:var(--ok)}.stat.ok b{color:var(--ok)}
+.stat.blue{border-color:var(--blue)}
+.stat b.txt{font-size:17px;line-height:1.25;padding-top:6px}
+.dnote{margin:12px 0 0;font-size:13px;color:var(--muted)}
+
+/* ===== modo apresentação ===== */
+.pres{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;
+  --bg:#15181a;--surface:#1d2124;--surface2:#2b3034;--ink:#eef0f2;--muted:#a3abb2;--line:#363c41;
+  --red:#ff6b6b;--ok:#4cc982;--blue:#7fb2ee;--amber:#f2c94c;--amber-soft:#352c10;--ok-soft:#15301f;--red-soft:#3b1a1e;--focus:#f2b705;
+  background:var(--bg);color:var(--ink);color-scheme:dark;
+  padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+.pres .stripe{height:12px;background:var(--stripe);flex:none}
+.pres .stage{flex:1;overflow:auto;padding:clamp(18px,3.4vw,60px) clamp(18px,4.5vw,80px);display:flex}
+.pres .slide{flex:1;display:flex;flex-direction:column;max-width:1500px;width:100%;margin:0 auto;animation:sf .28s ease-out}
+@keyframes sf{from{opacity:0;transform:translateX(18px)}}
+@media (prefers-reduced-motion:reduce){.pres .slide{animation:none}}
+.pres .st{font-size:clamp(26px,3.5vw,54px);margin:0;letter-spacing:-.025em;line-height:1.08;font-weight:750}
+.pres .sub{font-size:clamp(14px,1.45vw,21px);color:var(--muted);margin:.4em 0 0}
+.pres .body{flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:clamp(16px,4vh,48px)}
+.pres .foot{display:flex;align-items:center;gap:10px;padding:10px clamp(12px,3vw,40px);border-top:1px solid var(--line);font-size:14px;color:var(--muted);flex:none}
+.pres .foot button{background:var(--surface);border:1px solid var(--line);color:var(--ink);border-radius:99px;min-width:44px;height:44px;padding:0 14px;cursor:pointer;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.pres .foot button[aria-pressed=true]{background:var(--yellow);color:#1a1c1e;border-color:var(--yellow)}
+.pres .foot svg{width:18px;height:18px}
+.pres .prog{flex:1;display:flex;gap:4px;min-width:40px}
+.pres .prog i{flex:1;height:5px;border-radius:99px;background:var(--line)}
+.pres .prog i.on{background:var(--yellow)}
+.pres .prog i.done{background:#6b6250}
+.pres .count{font-variant-numeric:tabular-nums;min-width:3.2em;text-align:right}
+.pres .kpis{background:transparent;border:0;gap:clamp(14px,2.4vw,40px);overflow:visible}
+.pres .kpi{background:transparent;padding:clamp(10px,2vh,22px) 0 0;border-top-width:7px}
+.pres .kpi b{font-size:clamp(46px,7.4vw,124px)}
+.pres .kpi span{font-size:clamp(15px,1.6vw,24px)}
+.pres .kpi small{font-size:clamp(13px,1.2vw,18px)}
+.pres .cols{height:clamp(220px,52vh,560px);gap:clamp(6px,1vw,16px)}
+.pres .cols .bw i{max-width:90px}
+.pres .cols .bw em{font-size:clamp(12px,1.25vw,20px)}
+.pres .cols .c>span{font-size:clamp(11px,1.15vw,17px)}
+.pres .hb{gap:clamp(12px,2.2vh,22px)}
+.pres .hb .r{font-size:clamp(15px,1.7vw,25px)}
+.pres .hb .t{height:clamp(12px,1.8vh,22px)}
+.pres .statrow{gap:clamp(14px,2.4vw,40px);margin-bottom:clamp(16px,4vh,44px)}
+.pres .stat{border-left-width:8px;padding-left:clamp(10px,1.2vw,20px)}
+.pres .stat b{font-size:clamp(34px,5.2vw,86px)}
+.pres .stat b.txt{font-size:clamp(18px,2vw,32px)}
+.pres .stat span{font-size:clamp(13px,1.4vw,21px)}
+.split{display:grid;gap:18px}
+@media(min-width:1180px){.dpanel .split{grid-template-columns:1fr 1fr}}
+.pres .split{display:grid;gap:clamp(18px,3vw,56px)}
+@media(min-width:900px){.pres .split{grid-template-columns:1fr 1fr;align-items:start}}
+.pres table.t{font-size:clamp(14px,1.4vw,21px)}
+.pres .dnote{font-size:clamp(13px,1.2vw,18px)}
+.cover{flex:1;display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,3vh,34px)}
+.cover svg{width:clamp(70px,9vw,140px);height:auto}
+.cover h1{font-size:clamp(40px,7.2vw,124px);margin:0;line-height:.98;letter-spacing:-.035em;font-weight:800}
+.cover .what{font-size:clamp(20px,2.6vw,42px);margin:0;color:var(--yellow);font-weight:650;letter-spacing:-.01em}
+.cover .per{font-size:clamp(14px,1.5vw,22px);color:var(--muted);margin:0;border-top:1px solid var(--line);padding-top:clamp(10px,2vh,20px);max-width:40em}
+
+
 </style>
 </head>
 <body>
@@ -295,7 +411,7 @@ table.t td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:to
    Um único arquivo: site (navegador) e app Android (Capacitor).
    Dados no Cloud Firestore; regras de segurança em firestore.rules.
    ===================================================================== */
-const VERSION = '0.3.0';
+const VERSION = '0.4.0';
 const FIREBASE_VER = '10.12.2';
 const TZ = 'America/Sao_Paulo';
 const CA_URL = 'https://caepi.mte.gov.br/internet/ConsultaCAInternet.aspx';
@@ -312,6 +428,7 @@ const CAN = {
   admin:    ['admin'],
   audit:    ['admin','auditor','tecnico'],
 };
+const EARLY_CAUSES = ['Dano / quebra','Desgaste prematuro','Perda / extravio','Contaminação','Tamanho ou ajuste inadequado','Defeito de fabricação','Outro'];
 const REASONS = ['Primeira entrega','Substituição por desgaste','Substituição por dano','Extravio','Alteração de função ou risco','Entrega complementar'];
 const EMP_STATUS = ['Ativo','Afastado','Desligado'];
 const MOV = {entrada:'Entrada (compra / recebimento)', saida_entrega:'Saída por entrega', devolucao:'Devolução', estorno:'Estorno de entrega cancelada', ajuste:'Ajuste', inventario:'Inventário'};
@@ -363,6 +480,9 @@ const ICON = {
   out:'<svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l-5-5 5-5M5 12h11"/></svg>',
   key:'<svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3"/></svg>',
   box:'<svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>',
+  chart:'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M3 20h18M6 16v-5M11 16V6M16 16v-8M21 16v-3"/></svg>',
+  play:'<svg width="20" height="20" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></svg>',
+  cal:'<svg width="20" height="20" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M12 13.5v3.5l2.5 1.5"/></svg>',
   csv:'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>',
 };
 
@@ -443,6 +563,40 @@ const userName = uid => D.users[uid]?.name || (uid===ME?.uid ? ME.name : '—');
 const empDeliveries = empId => vals('deliveries').filter(d => d.employee && d.employee.id===empId).sort((a,b)=>(b.number||0)-(a.number||0));
 const sortDel = (a,b) => (b.number||0)-(a.number||0);
 
+/* ---------- regras de uso (prazo mínimo para troca) ---------- */
+const isoLocal = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const delDate = d => ymd(d.createdAt) || String(d.clientAt||'').slice(0,10);
+function ruleOf(e){
+  const v = parseInt(e && e.useValue, 10); if(!(v > 0)) return null;
+  const u = e.useUnit === 'dias' ? 'dias' : 'meses';
+  return {v, u, label: u==='meses' ? (v===1 ? '1 mês' : v+' meses') : plural(v,'dia')};
+}
+function addRule(iso, rule){
+  const [y,m,d] = String(iso).slice(0,10).split('-').map(Number), dt = new Date(y, m-1, d, 12);
+  if(rule.u==='meses'){ dt.setMonth(dt.getMonth()+rule.v); if(dt.getDate()!==d) dt.setDate(0); } else dt.setDate(dt.getDate()+rule.v);
+  return isoLocal(dt);
+}
+/* última vez que cada trabalhador recebeu cada EPI (entregas não canceladas e com EPI entregue) */
+function buildLastMap(){
+  const m = new Map();
+  vals('deliveries').forEach(d => {
+    if(!d.employee || d.stockOut===false || isCancelled(d.id)) return;
+    const dt = delDate(d); if(!dt) return;
+    (d.items||[]).forEach(i => { const k = d.employee.id+'|'+i.epiId, c = m.get(k); if(!c || (d.number||0) > (c.d.number||0)) m.set(k, {d, date:dt}); });
+  });
+  return m;
+}
+/* situação do prazo: first = nunca recebeu · free = sem regra · early = antes do prazo · due = prazo cumprido */
+function usage(empId, epiId, map){
+  const rule = ruleOf(D.epis[epiId]), last = (map || buildLastMap()).get(empId+'|'+epiId) || null;
+  if(!last) return {k:'first', rule, last:null};
+  const since = -daysUntil(last.date);
+  if(!rule) return {k:'free', rule, last, since};
+  const next = addRule(last.date, rule), left = daysUntil(next);
+  return {k: left > 0 ? 'early' : 'due', rule, last, since, next, left};
+}
+const reasonTxt = i => (i.reason||'') + (i.early ? ` · troca fora do prazo (${i.early.cause})` : '');
+
 /* ---------- foto do trabalhador (só para identificação visual) ---------- */
 const PHOTOS = {};
 function getPhoto(id){
@@ -479,18 +633,18 @@ function go(v, p={}){ stack.push({v, ...p}); history.pushState({n:stack.length},
 function goBack(){ if(stack.length > 1) history.back(); }
 function replaceTop(v, p={}){ stack[stack.length-1] = {v, ...p}; render(true); }
 function setTab(t){ stack = [{v:t}]; render(true); }
-window.addEventListener('popstate', () => { if(stack.length > 1){ stack.pop(); render(true); } });
+window.addEventListener('popstate', () => { if(PRES){ closePres(true); return; } if(stack.length > 1){ stack.pop(); render(true); } });
 $('#backbtn').onclick = goBack;
 $('#tabs').addEventListener('click', e => { const b = e.target.closest('[data-tab]'); if(b) setTab(b.dataset.tab); });
-const FORM_VIEWS = ['importEmps','empForm','empPin','epiForm','moveForm','deliver','regularize','annForm','userForm','company','term','verify'];
+const FORM_VIEWS = ['rules','importEmps','empForm','empPin','epiForm','moveForm','deliver','regularize','annForm','userForm','company','term','verify'];
 let renderQ = null;
-function softRender(){ clearTimeout(renderQ); renderQ = setTimeout(() => { if(!ME || FORM_VIEWS.includes(cur().v)) return; const y = $('#view').scrollTop; render(); $('#view').scrollTop = y; }, 120); }
+function softRender(){ clearTimeout(renderQ); renderQ = setTimeout(() => { if(PRES && ME) drawPres(); if(!ME || FORM_VIEWS.includes(cur().v)) return; const y = $('#view').scrollTop; render(); $('#view').scrollTop = y; }, 120); }
 function render(scrollTop){
   const r = cur(); const fn = VIEWS[r.v];
   if(!fn){ stack = [{v:'home'}]; return render(true); }
   const out = fn(r);
   $('#title').textContent = out.title || 'SG-EPI';
-  $('#view').innerHTML = `<div class="wrap">${out.html}</div>`;
+  $('#view').innerHTML = `<div class="wrap${out.wide ? ' wide' : ''}">${out.html}</div>`;
   $('#backbtn').classList.toggle('hidden', stack.length < 2 || !!out.lock);
   $('#tabs').classList.toggle('hidden', !!out.lock);
   const tab = stack[0].v;
@@ -680,6 +834,7 @@ VIEWS.home = () => {
   const ready = loaded.has('deliveries') && loaded.has('epis');
   return { title: D.company.name || 'SG-EPI', html:`
     ${can('deliver') ? `<button class="btn primary bigbtn" id="newdel">${ICON.plus} Nova entrega de EPI</button>` : ''}
+    <button class="dashlink" id="dashgo">${ICON.chart}<span><b>Dashboard</b><small>Indicadores do período e modo apresentação</small></span><svg width="20" height="20" viewBox="0 0 24 24" style="width:20px;height:20px;color:#fff"><path d="M9 6l6 6-6 6"/></svg></button>
     <h2>Resumo</h2>
     ${!ready ? '<p class="small muted">Carregando dados…</p>' : ''}
     <div class="tiles">
@@ -696,6 +851,7 @@ VIEWS.home = () => {
     <div class="list">${dels.sort(sortDel).slice(0,6).map(delCard).join('') || '<div class="empty">Nenhuma entrega registrada ainda.</div>'}</div>
   `, after(){
     $('#newdel') && ($('#newdel').onclick = () => go('deliver', {}));
+    $('#dashgo').onclick = () => go('dash', {});
     $$('[data-go]').forEach(b => b.onclick = () => { const g = b.dataset.go; if(g==='pend') stack=[{v:'dels', f:'pend'}]; else if(g==='low') stack=[{v:'epis', f:'low'}]; else stack=[{v:g}]; render(true); });
     $('#gonopin') && ($('#gonopin').onclick = ev => { ev.preventDefault(); stack=[{v:'emps', f:'nopin'}]; render(true); });
     bindCards();
@@ -733,6 +889,8 @@ function bindCards(){
 VIEWS.more = () => ({ title:'Mais', html:`
   <div class="panel" style="margin-bottom:12px"><b>${esc(ME.name)}</b><div class="small muted">${esc(ME.email||'')} · ${esc(ROLES[ME.role]||ME.role)}</div></div>
   <div class="menu">
+    <button data-m="dash">${ICON.chart}<span>Dashboard e apresentação<small>Indicadores para reuniões, com modo tela cheia</small></span></button>
+    ${can('epi') ? `<button data-m="rules">${ICON.cal}<span>Regras de uso dos EPIs<small>Prazo mínimo para troca de cada EPI</small></span></button>` : ''}
     <button data-m="verify">${ICON.shield}<span>Verificar comprovante<small>Confere se um comprovante é autêntico pelo código</small></span></button>
     ${can('people') ? `<button data-m="importEmps">${ICON.users}<span>Importar trabalhadores<small>Carrega vários de uma vez a partir de uma planilha (CSV)</small></span></button>` : ''}
     ${can('admin') ? `<button data-m="users">${ICON.users}<span>Usuários e permissões<small>Quem pode entrar e o que pode fazer</small></span></button>` : ''}
@@ -804,6 +962,7 @@ VIEWS.emp = (r) => {
       <dt>EPIs previstos</dt><dd>${planned.length ? esc(planned.join(', ')) : '—'}</dd>
       ${e.notes ? `<dt>Observações</dt><dd>${esc(e.notes)}</dd>` : ''}
     </dl></div>
+    ${empUsageHtml(e)}
     <h2>Entregas (${ds.length})</h2>
     <div class="list">${ds.map(delCard).join('') || '<div class="empty">Nenhuma entrega para este trabalhador.</div>'}</div>`,
     after(){
@@ -924,12 +1083,13 @@ VIEWS.epis = (r) => {
   return { title:'EPIs', html:`
     <input class="search" type="search" id="q" placeholder="Buscar por descrição, código, CA ou fabricante" value="${esc(r.q||'')}" aria-label="Buscar EPI">
     <div class="filters">${F.map(([k,l])=>`<button data-f="${k}" aria-pressed="${f===k}">${l}</button>`).join('')}</div>
-    <div class="row" style="margin-bottom:10px"><span class="muted small grow">${plural(es.length,'EPI')}</span>${can('epi') ? `<button class="btn" id="new">${ICON.plus} Novo EPI</button>` : ''}</div>
+    <div class="row" style="margin-bottom:10px"><span class="muted small grow">${plural(es.length,'EPI')}</span>${can('epi') ? `<button class="btn" id="rules">${ICON.cal} Regras de uso</button><button class="btn" id="new">${ICON.plus} Novo EPI</button>` : ''}</div>
     <div class="list">${es.map(epiCard).join('') || '<div class="empty">Nenhum EPI neste filtro.</div>'}</div>`,
     after(){
       const qi = $('#q'); qi.oninput = () => { r.q = qi.value; const p = qi.selectionStart; render(); const n = $('#q'); n.focus(); n.setSelectionRange(p,p); };
       $$('[data-f]').forEach(b => b.onclick = () => { r.f = b.dataset.f; render(); });
       $('#new') && ($('#new').onclick = () => go('epiForm', {}));
+      $('#rules') && ($('#rules').onclick = () => go('rules', {}));
       bindCards();
     }};
 };
@@ -957,6 +1117,7 @@ VIEWS.epi = (r) => {
       <dt>Nº do CA</dt><dd>${esc(e.ca||'—')}</dd>
       <dt>Validade do CA</dt><dd>${fmtDate(e.caValidity)}</dd>
       <dt>CA verificado em</dt><dd>${fmtDate(e.caCheckedAt)}${e.caCheckedBy ? ' por '+esc(userName(e.caCheckedBy)) : ''}</dd>
+      <dt>Regra de uso</dt><dd>${ruleOf(e) ? 'Troca a partir de '+esc(ruleOf(e).label)+' de uso' : 'Sem regra definida'}</dd>
       <dt>Vida útil (referência)</dt><dd>${esc(e.lifeRef||'—')}</dd>
       <dt>Localização</dt><dd>${esc(e.location||'—')}</dd>
       ${e.notes ? `<dt>Observações</dt><dd>${esc(e.notes)}</dd>` : ''}
@@ -999,6 +1160,10 @@ VIEWS.epiForm = (r) => {
       ${fld('Vida útil estimada (só referência)', inp('lifeRef', e.lifeRef, 'text', 'placeholder="Ex.: 3 meses de uso diário"'))}
       ${isNew ? '<p class="small muted" style="margin:0">O saldo começa em zero. Depois de salvar, registre a entrada do estoque.</p>' : ''}
     </fieldset>
+    <fieldset><legend>Regra de uso (prazo para troca)</legend>
+      <p class="small muted" style="margin-top:0">Tempo mínimo de uso antes de receber outro igual. Ex.: botina 6 meses, luva 1 mês. Antes do prazo a troca continua possível, mas pede o motivo e fica marcada como fora do prazo.</p>
+      <div class="grid2">${fld('Prazo mínimo', inp('useValue', e.useValue ?? '', 'number', 'min="0" inputmode="numeric" placeholder="Ex.: 6"'))}${fld('Unidade do prazo', sel('useUnit', e.useUnit||'meses', [{v:'meses',l:'meses'},{v:'dias',l:'dias'}], false))}</div>
+    </fieldset>
     ${fld('Observações', ta('notes', e.notes))}
     ${!isNew ? fld('Situação', sel('active', e.active===false?'0':'1', [{v:'1',l:'Ativo'},{v:'0',l:'Inativo (não aparece na entrega)'}], false)) : ''}
     <div class="sticky-save"><button class="btn primary full" type="submit">${isNew ? 'Cadastrar EPI' : 'Salvar alterações'}</button></div>
@@ -1006,6 +1171,7 @@ VIEWS.epiForm = (r) => {
     $('#f').onsubmit = ev => {
       ev.preventDefault(); const fd = new FormData(ev.target), data = {};
       ['code','description','category','manufacturer','model','ca','caValidity','caCheckedAt','unit','location','lifeRef','notes'].forEach(k => data[k] = trim(fd.get(k)));
+      { const uv = parseInt(fd.get('useValue'),10); data.useValue = uv > 0 ? uv : ''; data.useUnit = fd.get('useUnit')==='dias' ? 'dias' : 'meses'; }
       data.minStock = fd.get('minStock') === '' ? '' : Math.max(0, parseInt(fd.get('minStock'),10)||0);
       data.active = isNew ? true : fd.get('active') !== '0';
       if(data.code){ const dup = vals('epis').find(x => x.id!==r.id && norm(x.code)===norm(data.code)); if(dup) return toast(`O código ${data.code} já é de ${dup.description}.`); }
@@ -1114,7 +1280,7 @@ function newItem(epiId, empId){
 }
 function stepsBar(n, total=5){ return `<div class="steps">${Array.from({length:total},(_,i)=>`<span class="${i+1<n?'done':i+1===n?'on':''}"></span>`).join('')}</div>`; }
 function itemsSummary(items){
-  return `<div class="tscroll"><table class="t"><tr><th>EPI</th><th>CA</th><th>Qtd</th><th>Motivo</th></tr>${items.map(i => { const e = D.epis[i.epiId]||{}; return `<tr><td><b>${esc(e.description)}</b>${i.lot?`<div class="small muted">Lote ${esc(i.lot)}</div>`:''}</td><td>${esc(e.ca||'—')}</td><td>${i.qty} ${esc(e.unit||'un')}</td><td class="small">${esc(i.reason)}</td></tr>`; }).join('')}</table></div>`;
+  return `<div class="tscroll"><table class="t"><tr><th>EPI</th><th>CA</th><th>Qtd</th><th>Motivo</th></tr>${items.map(i => { const e = D.epis[i.epiId]||{}; return `<tr><td><b>${esc(e.description)}</b>${i.lot?`<div class="small muted">Lote ${esc(i.lot)}</div>`:''}</td><td>${esc(e.ca||'—')}</td><td>${i.qty} ${esc(e.unit||'un')}</td><td class="small">${esc(i.reason)}${i.earlyCause ? `<div style="color:var(--amber);font-weight:600">Fora do prazo: ${esc(i.earlyCause)}</div>` : ''}</td></tr>`; }).join('')}</table></div>`;
 }
 
 VIEWS.deliver = (r) => {
@@ -1160,6 +1326,12 @@ VIEWS.deliver = (r) => {
             <div class="field" style="margin:0"><label class="lbl">Lote</label><input type="text" value="${esc(it.lot)}" data-lot list="dl-lot-${ix}">${dl('dl-lot-'+ix, lots.map(l=>l.lot))}</div>
           </div>
           <div class="field" style="margin:10px 0 0"><label class="lbl">Motivo</label>${sel('reason'+ix, it.reason, REASONS, false, 'data-reason')}</div>
+          ${(() => { const u = usage(emp.id, it.epiId); if(u.k==='due') return `<div class="rulebox due">Prazo cumprido: recebeu em ${fmtDate(u.last.date)} · troca liberada desde ${fmtDate(u.next)}</div>`;
+            if(u.k!=='early') return '';
+            return `<div class="rulebox early"><b>Troca fora do prazo de uso</b>Recebeu este EPI em ${fmtDate(u.last.date)} (entrega Nº ${esc(u.last.d.number)}), há ${plural(u.since,'dia')}. Regra: ${esc(u.rule.label)}; troca prevista a partir de ${fmtDate(u.next)}. Para entregar mesmo assim, informe o motivo (fica registrado na entrega e na auditoria).
+              <div class="field"><label class="lbl">Motivo da troca antecipada *</label>${sel('ec'+ix, it.earlyCause||'', EARLY_CAUSES, true, 'data-ecause')}</div>
+              <div class="field"><label class="lbl">O que aconteceu *</label><input type="text" data-enote value="${esc(it.earlyNote||'')}" placeholder="Ex.: biqueira soltou durante a atividade"></div>
+              <label class="ck"><input type="checkbox" data-eret ${it.earlyReturned?'checked':''}> O EPI anterior foi recolhido</label></div>`; })()}
           ${over ? (can('noStock') ? `<div class="field" style="margin:10px 0 0"><label class="lbl" style="color:var(--red)">Sem saldo suficiente. Justifique para liberar (fica na auditoria):</label><input type="text" data-just value="${esc(it.just)}" placeholder="Ex.: compra recebida, ainda não lançada"></div>` : `<p class="small" style="color:var(--red);margin:8px 0 0">Saldo insuficiente (${b}). Ajuste a quantidade ou peça ao técnico de segurança para liberar.</p>`) : ''}
         </div>`; }).join('') || '<div class="empty" style="padding:16px">Nenhum EPI adicionado ainda.</div>'}</div>
       ${planned.length ? `<h2>Previstos para ${esc(emp.name.split(' ')[0])}</h2><div class="filters" style="flex-wrap:wrap">${planned.map(id=>`<button data-add="${id}">${ICON.plus} ${esc(D.epis[id].description)}</button>`).join('')}</div>` : ''}
@@ -1179,6 +1351,9 @@ VIEWS.deliver = (r) => {
           box.querySelector('[data-qty]').onchange = ev => { it.qty = Math.max(1, parseInt(ev.target.value,10)||1); const y = $('#view').scrollTop; render(); $('#view').scrollTop = y; };
           box.querySelector('[data-lot]').oninput = ev => it.lot = trim(ev.target.value);
           box.querySelector('[data-reason]').onchange = ev => it.reason = ev.target.value;
+          const ec = box.querySelector('[data-ecause]'); if(ec) ec.onchange = ev => it.earlyCause = ev.target.value;
+          const en = box.querySelector('[data-enote]'); if(en) en.oninput = ev => it.earlyNote = ev.target.value;
+          const er = box.querySelector('[data-eret]'); if(er) er.onchange = ev => it.earlyReturned = ev.target.checked;
           const j = box.querySelector('[data-just]'); if(j) j.oninput = ev => it.just = ev.target.value;
         });
         $('#notes').oninput = ev => r.notes = ev.target.value;
@@ -1187,6 +1362,9 @@ VIEWS.deliver = (r) => {
             const e = D.epis[it.epiId], b = balance(it.epiId);
             if(it.qty > b){ if(!can('noStock')) return toast(`Saldo insuficiente de ${e.description}.`); if(trim(it.just).length < 5) return toast(`Justifique a saída sem saldo de ${e.description}.`); }
             else it.just = '';
+            const u = usage(emp.id, it.epiId);
+            if(u.k==='early'){ if(!it.earlyCause) return toast(`Escolha o motivo da troca fora do prazo de ${e.description}.`); if(trim(it.earlyNote).length < 5) return toast(`Descreva o que aconteceu com ${e.description} (troca fora do prazo).`); }
+            else { it.earlyCause = ''; it.earlyNote = ''; it.earlyReturned = false; }
           }
           r.step = 3; render(true);
         };
@@ -1204,6 +1382,7 @@ VIEWS.deliver = (r) => {
         ${r.notes ? `<div class="small"><b>Observações:</b> ${esc(r.notes)}</div>` : ''}
         <div class="small muted">Entregue por ${esc(ME.name)}</div>
       </div>
+      ${r.items.some(i=>i.earlyCause) ? `<div class="banner" style="margin-top:12px"><b>Troca fora do prazo:</b> ${esc(r.items.filter(i=>i.earlyCause).map(i=>`${D.epis[i.epiId]?.description} (${i.earlyCause})`).join(', '))}. Fica registrada na entrega.</div>` : ''}
       ${caBad.length ? `<div class="banner" style="margin-top:12px">Atenção: CA vencido em ${esc(caBad.map(i=>D.epis[i.epiId].description).join(', '))}. Confira se o lote foi adquirido dentro da validade do CA antes de entregar.</div>` : ''}
       ${!emp.hasPin ? `<div class="banner" style="margin-top:12px"><b>${esc(emp.name)} ainda não tem senha pessoal.</b> Sem ela, a entrega fica como pendente de confirmação. ${can('people') ? '<a href="#" id="setpin">Cadastrar a senha agora</a>' : 'Peça ao técnico de segurança para cadastrar.'}</div>` : ''}
       <h2>Termo de recebimento (versão ${term.version})</h2>
@@ -1326,11 +1505,16 @@ function delivererStep(r, emp, stepN){
     }};
 }
 
+function earlyOf(emp, i){
+  if(!i.earlyCause) return {};
+  const u = usage(emp.id, i.epiId); if(u.k!=='early') return {};
+  return {early:{cause:i.earlyCause, note:trim(i.earlyNote), oldReturned:!!i.earlyReturned, rule:u.rule.label, lastNumber:u.last.d.number||null, lastDate:u.last.date, allowedFrom:u.next, daysSince:u.since}};
+}
 function deliveryContent(r, emp, number, code, clientAt){
   return {
     number, code,
     employee:{id:emp.id, name:emp.name||'', registration:emp.registration||'', unit:emp.unit||'', sector:emp.sector||'', jobRole:emp.jobRole||''},
-    items: r.items.map(i => { const e = D.epis[i.epiId]||{}; return {epiId:i.epiId, code:e.code||'', description:e.description||'', ca:e.ca||'', caValidity:e.caValidity||'', manufacturer:e.manufacturer||'', unit:e.unit||'un', qty:Number(i.qty)||1, lot:i.lot||'', lotValidity:(lotsOf(i.epiId).find(l=>l.lot===i.lot)||{}).validity||'', reason:i.reason, noStockJustification:i.just||''}; }),
+    items: r.items.map(i => { const e = D.epis[i.epiId]||{}; return {epiId:i.epiId, code:e.code||'', description:e.description||'', ca:e.ca||'', caValidity:e.caValidity||'', manufacturer:e.manufacturer||'', unit:e.unit||'un', qty:Number(i.qty)||1, lot:i.lot||'', lotValidity:(lotsOf(i.epiId).find(l=>l.lot===i.lot)||{}).validity||'', reason:i.reason, noStockJustification:i.just||'', ...earlyOf(emp, i)}; }),
     notes: trim(r.notes),
     term:{version:r.term.version, text:r.term.text},
     deliveredBy:{uid:ME.uid, name:ME.name, role:ME.role},
@@ -1365,7 +1549,7 @@ async function commitDelivery(r){
     if(content.stockOut) r.items.forEach((it,ix) => {
       tx.set(moveRefs[ix], {epiId:it.epiId, type:'saida_entrega', delta:-(Number(it.qty)||1), qty:Number(it.qty)||1, lot:it.lot||'', deliveryId:id, deliveryNumber:number, employeeId:emp.id, reason:it.just ? 'Saída sem saldo: '+it.just : '', by:ME.uid, byName:ME.name, at:FV.serverTimestamp()});
     });
-    tx.set(db.collection('audit').doc(), auditDoc(r.refusal ? 'entrega.pendente' : 'entrega.confirmada', 'deliveries/'+id, `Nº ${number} · ${emp.name}${emp.registration?' (mat. '+emp.registration+')':''} · ${r.items.map(i=>`${i.qty}x ${D.epis[i.epiId]?.description}`).join(', ')}${r.refusal?' · '+r.refusal.kind:''}${r.items.some(i=>i.just)?' · saída sem saldo justificada':''}`));
+    tx.set(db.collection('audit').doc(), auditDoc(r.refusal ? 'entrega.pendente' : 'entrega.confirmada', 'deliveries/'+id, `Nº ${number} · ${emp.name}${emp.registration?' (mat. '+emp.registration+')':''} · ${r.items.map(i=>`${i.qty}x ${D.epis[i.epiId]?.description}`).join(', ')}${r.refusal?' · '+r.refusal.kind:''}${r.items.some(i=>i.just)?' · saída sem saldo justificada':''}${r.items.some(i=>i.earlyCause)?' · troca fora do prazo: '+r.items.filter(i=>i.earlyCause).map(i=>`${D.epis[i.epiId]?.description} (${i.earlyCause}: ${trim(i.earlyNote)})`).join('; '):''}`));
   });
   return id;
 }
@@ -1414,7 +1598,7 @@ VIEWS.del = (r) => {
       ${can('deliver') && !cancelled ? `<button class="btn" id="ann">Devolução, correção ou observação</button>` : ''}
     </div>
     <h2>EPIs entregues</h2>
-    <div class="panel tscroll"><table class="t"><tr><th>EPI</th><th>CA</th><th>Lote</th><th>Qtd</th><th>Motivo</th></tr>${(d.items||[]).map(i=>`<tr><td><b>${esc(i.description)}</b><div class="small muted">${esc(i.code||'')}</div>${i.noStockJustification?`<div class="small" style="color:var(--red)">Sem saldo: ${esc(i.noStockJustification)}</div>`:''}</td><td>${esc(i.ca||'—')}${i.caValidity?`<div class="small muted">val. ${fmtDate(i.caValidity)}</div>`:''}</td><td>${esc(i.lot||'—')}</td><td>${i.qty} ${esc(i.unit)}</td><td class="small">${esc(i.reason)}</td></tr>`).join('')}</table>
+    <div class="panel tscroll"><table class="t"><tr><th>EPI</th><th>CA</th><th>Lote</th><th>Qtd</th><th>Motivo</th></tr>${(d.items||[]).map(i=>`<tr><td><b>${esc(i.description)}</b><div class="small muted">${esc(i.code||'')}</div>${i.noStockJustification?`<div class="small" style="color:var(--red)">Sem saldo: ${esc(i.noStockJustification)}</div>`:''}</td><td>${esc(i.ca||'—')}${i.caValidity?`<div class="small muted">val. ${fmtDate(i.caValidity)}</div>`:''}</td><td>${esc(i.lot||'—')}</td><td>${i.qty} ${esc(i.unit)}</td><td class="small">${esc(i.reason)}${i.early ? `<div style="color:var(--amber);font-weight:600">Troca fora do prazo: ${esc(i.early.cause)}</div><div class="muted">${esc(i.early.note)}${i.early.oldReturned ? ' · EPI anterior recolhido' : ''} · anterior em ${fmtDate(i.early.lastDate)}, regra ${esc(i.early.rule)}</div>` : ''}</td></tr>`).join('')}</table>
     ${d.notes ? `<p class="small" style="margin:10px 0 0"><b>Observações:</b> ${esc(d.notes)}</p>` : ''}${!d.stockOut ? '<p class="small muted" style="margin:6px 0 0">Sem baixa no estoque (EPIs não ficaram com o trabalhador).</p>' : ''}</div>
     <h2>Confirmação do trabalhador</h2>
     <div class="panel stack ${ack?'ok-box':'warn-box'}">
@@ -1693,8 +1877,8 @@ async function shareFile(name, b64OrText, mime, isB64, text){
 }
 const fileSafe = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^\w.\-]+/g,'_');
 function exportCSV(){
-  const rows = [['Nº','Código','Data/hora','Situação','Matrícula','Trabalhador','Unidade','Setor','Cargo','Código EPI','EPI','CA','Validade CA','Lote','Qtd','Unidade med.','Motivo','Entregue por','Confirmado em']];
-  vals('deliveries').sort((a,b)=>a.number-b.number).forEach(d => { const st = delState(d), ack = D.acks[d.id]; (d.items||[]).forEach(i => rows.push([d.number, d.code, fmtDT(d.createdAt), st.label, d.employee?.registration, d.employee?.name, d.employee?.unit, d.employee?.sector, d.employee?.jobRole, i.code, i.description, i.ca, fmtDate(i.caValidity), i.lot, i.qty, i.unit, i.reason, d.deliveredBy?.name, ack ? fmtDT(ack.at) : ''])); });
+  const rows = [['Nº','Código','Data/hora','Situação','Matrícula','Trabalhador','Unidade','Setor','Cargo','Código EPI','EPI','CA','Validade CA','Lote','Qtd','Unidade med.','Motivo','Entregue por','Confirmado em','Justificativa da troca fora do prazo']];
+  vals('deliveries').sort((a,b)=>a.number-b.number).forEach(d => { const st = delState(d), ack = D.acks[d.id]; (d.items||[]).forEach(i => rows.push([d.number, d.code, fmtDT(d.createdAt), st.label, d.employee?.registration, d.employee?.name, d.employee?.unit, d.employee?.sector, d.employee?.jobRole, i.code, i.description, i.ca, fmtDate(i.caValidity), i.lot, i.qty, i.unit, reasonTxt(i), d.deliveredBy?.name, ack ? fmtDT(ack.at) : '', i.early ? i.early.note : ''])); });
   const csv = '﻿' + rows.map(r => r.map(v => { const s = String(v ?? ''); return /[;"\n]/.test(s) ? '"'+s.replace(/"/g,'""')+'"' : s; }).join(';')).join('\r\n');
   audit('relatorio.csv', 'deliveries', `${rows.length-1} linhas`);
   shareFile(`entregas_epi_${today()}.csv`, csv, 'text/csv', false);
@@ -1807,7 +1991,7 @@ async function comprovantePDF(d, btn){
     K.row('Cargo / função', d.employee?.jobRole);
     K.section('Equipamentos entregues');
     K.table([{t:'EPI',w:.36,b:true},{t:'CA',w:.1},{t:'Val. CA',w:.11},{t:'Lote',w:.13},{t:'Qtd',w:.08},{t:'Motivo',w:.22}],
-      (d.items||[]).map(i => ({cells:[i.description+(i.code?' ('+i.code+')':'')+(i.noStockJustification?'\nSaída sem saldo: '+i.noStockJustification:''), i.ca||'—', i.caValidity?fmtDate(i.caValidity):'—', i.lot||'—', `${i.qty} ${i.unit}`, i.reason]})));
+      (d.items||[]).map(i => ({cells:[i.description+(i.code?' ('+i.code+')':'')+(i.noStockJustification?'\nSaída sem saldo: '+i.noStockJustification:''), i.ca||'—', i.caValidity?fmtDate(i.caValidity):'—', i.lot||'—', `${i.qty} ${i.unit}`, reasonTxt(i)]})));
     if(d.notes){ K.y -= 4; K.para('Observações: '+d.notes, 9); }
     K.section(`Termo de recebimento (versão ${d.term?.version ?? '—'})`);
     K.para(d.term?.text);
@@ -1853,7 +2037,7 @@ async function fichaPDF(emp, btn){
       const st = delState(d), ack = D.acks[d.id], img = sigs[d.id] ? await K.embedPng(sigs[d.id]) : null;
       const anns = vals('annotations').filter(a => a.deliveryId===d.id);
       const extra = anns.map(a => `${ANN[a.type]}: ${a.text}${a.returned?.length?' ('+a.returned.map(x=>x.qty+'x '+x.description).join(', ')+')':''}`).join('\n');
-      (d.items||[]).forEach((i,ix) => rows.push({cells:[ix===0?`${d.number}\n${d.code}`:'', ix===0?fmtDT(d.createdAt):'', i.description, i.ca||'—', i.lot||'—', String(i.qty)+' '+i.unit, i.reason, ix===0?(st.label+(ack?'\n'+fmtDT(ack.at):'')+(extra?'\n'+extra:'')):'', ''], sig: ix===0 && img ? img : null, sigCol:8}));
+      (d.items||[]).forEach((i,ix) => rows.push({cells:[ix===0?`${d.number}\n${d.code}`:'', ix===0?fmtDT(d.createdAt):'', i.description, i.ca||'—', i.lot||'—', String(i.qty)+' '+i.unit, reasonTxt(i), ix===0?(st.label+(ack?'\n'+fmtDT(ack.at):'')+(extra?'\n'+extra:'')):'', ''], sig: ix===0 && img ? img : null, sigCol:8}));
     }
     if(rows.length) K.table([{t:'Nº / código',w:.08,b:true},{t:'Data',w:.1},{t:'EPI',w:.2,b:true},{t:'CA',w:.06},{t:'Lote',w:.08},{t:'Qtd',w:.05},{t:'Motivo',w:.12},{t:'Situação',w:.15},{t:'Assinatura',w:.16}], rows);
     else K.para('Nenhuma entrega registrada.');
@@ -1963,6 +2147,224 @@ VIEWS.importEmps = (r) => {
       });
     }};
 };
+
+/* =====================================================================
+   REGRAS DE USO: tela única para definir o prazo de todos os EPIs
+   ===================================================================== */
+VIEWS.rules = (r) => {
+  if(!can('epi')) return {title:'Regras de uso', html:'<div class="empty">Seu perfil não altera EPIs.</div>'};
+  const es = vals('epis').filter(e => e.active!==false).sort((a,b)=>norm(a.description).localeCompare(norm(b.description)));
+  const none = es.filter(e => !ruleOf(e)).length;
+  return { title:'Regras de uso', html:`
+    <div class="panel stack" style="margin-bottom:12px">
+      <p style="margin:0">Defina por quanto tempo cada EPI deve ser usado antes da próxima troca. Exemplo: botina <b>6 meses</b>, luva <b>1 mês</b>.</p>
+      <p class="small muted" style="margin:0">Na entrega, se o trabalhador recebeu o mesmo EPI antes do prazo, o sistema avisa e pede o motivo (dano, perda, desgaste…). A troca nunca é bloqueada: EPI danificado deve ser trocado na hora. Deixe em branco para não ter regra.</p>
+      ${none ? chip('warn', `${plural(none,'EPI','EPIs')} sem regra`) : chip('ok','Todos os EPIs ativos têm regra')}
+    </div>
+    <form id="f" autocomplete="off">
+      <div class="panel" style="padding:4px 14px">
+        <div class="rl small muted" style="padding:10px 0 6px"><span>EPI</span><span>Prazo</span><span>Unidade</span></div>
+        ${es.map(e => `<div class="rl" data-id="${e.id}"><div style="min-width:0"><div class="title">${esc(e.description)}</div><div class="small muted">${esc([e.category, e.ca ? 'CA '+e.ca : ''].filter(Boolean).join(' · ')||'—')}</div></div>
+          <input type="number" min="0" inputmode="numeric" aria-label="Prazo de ${esc(e.description)}" data-v value="${esc(e.useValue ?? '')}" placeholder="—">
+          ${sel('u_'+e.id, e.useUnit||'meses', [{v:'meses',l:'meses'},{v:'dias',l:'dias'}], false, `data-u aria-label="Unidade do prazo de ${esc(e.description)}"`)}</div>`).join('') || '<div class="empty">Nenhum EPI ativo cadastrado.</div>'}
+      </div>
+      ${es.length ? '<div class="sticky-save"><button class="btn primary full" type="submit">Salvar regras</button></div>' : ''}
+    </form>`, after(){
+    $('#f').onsubmit = ev => {
+      ev.preventDefault();
+      const b = db.batch(), changes = [];
+      $$('.rl[data-id]').forEach(row => {
+        const e = D.epis[row.dataset.id]; if(!e) return;
+        const n = parseInt(row.querySelector('[data-v]').value, 10), v = n > 0 ? n : '', u = row.querySelector('[data-u]').value === 'dias' ? 'dias' : 'meses';
+        const ov = parseInt(e.useValue,10) > 0 ? parseInt(e.useValue,10) : '', ou = e.useUnit === 'dias' ? 'dias' : 'meses';
+        if(v === ov && (v === '' || u === ou)) return;
+        b.update(db.doc('epis/'+e.id), {useValue:v, useUnit:u, updatedAt:FV.serverTimestamp(), updatedBy:ME.uid});
+        changes.push(`${e.description}: ${v === '' ? 'sem regra' : ruleOf({useValue:v, useUnit:u}).label}`);
+      });
+      if(!changes.length) return toast('Nenhuma regra foi alterada.');
+      b.set(db.collection('audit').doc(), auditDoc('epi.regra_uso', 'epis', changes.join('; ')));
+      ev.target.querySelector('[type=submit]').disabled = true;
+      b.commit().catch(err => toast('Não foi salvo: '+dbMsg(err)));
+      toast(`${plural(changes.length,'regra salva','regras salvas')}`); goBack();
+    };
+  }};
+};
+
+/* prazos de uso na ficha do trabalhador */
+function empUsageHtml(emp){
+  const map = buildLastMap(), rows = [];
+  map.forEach((v, k) => { if(k.split('|')[0] !== emp.id) return; const id = k.split('|')[1], e = D.epis[id]; if(!e || e.active===false) return; rows.push({e, u:usage(emp.id, id, map)}); });
+  if(!rows.length) return '';
+  const ord = x => x.u.k==='due' ? 0 : x.u.k==='early' ? 1 : 2;
+  rows.sort((a,b) => ord(a)-ord(b) || (a.u.left??9e9)-(b.u.left??9e9));
+  return `<h2>Prazos de uso</h2><div class="panel tscroll"><table class="t"><tr><th>EPI</th><th>Recebido em</th><th>Regra</th><th>Próxima troca</th></tr>${rows.map(({e,u}) => `<tr><td><b>${esc(e.description)}</b></td><td>${fmtDate(u.last.date)}</td><td>${u.rule ? esc(u.rule.label) : '<span class="muted">sem regra</span>'}</td><td>${u.k==='due' ? chip('ok','Liberada desde '+fmtDate(u.next)) : u.k==='early' ? chip(u.left<=15?'warn':'n', `${fmtDate(u.next)} · em ${plural(u.left,'dia')}`) : '—'}</td></tr>`).join('')}</table></div>`;
+}
+
+/* =====================================================================
+   DASHBOARD E MODO APRESENTAÇÃO
+   ===================================================================== */
+const PERIODS = [['30d','30 dias'],['90d','3 meses'],['12m','12 meses'],['ano','Este ano']];
+const nf = n => Number(n||0).toLocaleString('pt-BR');
+const pct = (a,b) => b ? Math.round(a*100/b) : 0;
+const toList = o => Object.entries(o).map(([l,v]) => ({l, v})).sort((a,b) => b.v-a.v || a.l.localeCompare(b.l,'pt-BR'));
+function periodFrom(p){
+  const d = new Date(today()+'T12:00:00');
+  if(p==='30d') d.setDate(d.getDate()-29);
+  else if(p==='90d') d.setDate(d.getDate()-89);
+  else if(p==='ano'){ d.setMonth(0); d.setDate(1); }
+  else { d.setDate(1); d.setMonth(d.getMonth()-11); }
+  return isoLocal(d);
+}
+const sectorsAll = () => [...new Set([...listOf('sectors'), ...vals('employees').map(e => trim(e.sector))].filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+
+function dashData(p, sector){
+  const from = periodFrom(p), t = today();
+  const inSec = emp => !sector || trim(emp && emp.sector) === sector;
+  const delsAll = vals('deliveries').filter(d => !isCancelled(d.id) && inSec(d.employee));
+  const dels = delsAll.filter(d => { const y = delDate(d); return y >= from && y <= t; });
+  let items = 0, early = 0;
+  const byEpi = {}, byGroup = {}, byCause = {}, earlyEpi = {};
+  dels.forEach(d => (d.items||[]).forEach(i => {
+    const q = Number(i.qty)||1, g = trim(sector ? d.employee?.jobRole : d.employee?.sector) || (sector ? 'Sem função' : 'Sem setor');
+    items += q; byEpi[i.description||'—'] = (byEpi[i.description||'—']||0) + q; byGroup[g] = (byGroup[g]||0) + q;
+    if(i.early){ early += q; byCause[i.early.cause] = (byCause[i.early.cause]||0) + q; earlyEpi[i.description||'—'] = (earlyEpi[i.description||'—']||0) + q; }
+  }));
+  const actives = vals('employees').filter(e => e.status!=='Desligado' && inSec(e));
+  const served = new Set(dels.map(d => d.employee?.id)).size;
+  const confirmed = dels.filter(d => D.acks[d.id]).length;
+  /* últimos 12 meses */
+  const months = [], base = new Date(t+'T12:00:00'); base.setDate(1);
+  for(let k = 11; k >= 0; k--){ const d = new Date(base); d.setMonth(d.getMonth()-k); months.push({key:isoLocal(d).slice(0,7), label:d.toLocaleDateString('pt-BR',{month:'short'}).replace('.',''), full:d.toLocaleDateString('pt-BR',{month:'long', year:'numeric'}), v:0}); }
+  delsAll.forEach(d => { const m = months.find(x => x.key === delDate(d).slice(0,7)); if(m) m.v += (d.items||[]).reduce((a,i)=>a+(Number(i.qty)||1),0); });
+  /* prazos de uso, hoje */
+  const map = buildLastMap(), due = [], soon = [], activeIds = new Set(actives.map(e => e.id));
+  map.forEach((v, k) => { const [eid, pid] = k.split('|'); if(!activeIds.has(eid)) return; const e = D.epis[pid]; if(!e || e.active===false || !ruleOf(e)) return; const u = usage(eid, pid, map); const x = {emp:D.employees[eid], e, u}; if(u.k==='due') due.push(x); else if(u.k==='early' && u.left <= 30) soon.push(x); });
+  soon.sort((a,b) => a.u.left - b.u.left);
+  const epis = vals('epis').filter(e => e.active!==false);
+  return {p, sector, from, t, rangeLabel:`${fmtDate(from)} a ${fmtDate(t)}`, periodName:(PERIODS.find(x=>x[0]===p)||['',''])[1],
+    dels:dels.length, items, served, actives:actives.length, confirmed, early, months,
+    topEpis:toList(byEpi), groups:toList(byGroup), causes:toList(byCause), earlyEpis:toList(earlyEpi),
+    due, soon, noRule:epis.filter(e => !ruleOf(e)).length, episN:epis.length,
+    caVenc:epis.filter(e => caState(e).k==='venc').length, caWarn:epis.filter(e => caState(e).k==='warn').length,
+    noStock:epis.filter(e => stockState(e).k==='venc').length, lowStock:epis.filter(e => stockState(e).k==='warn').length,
+    pending:pendingDels().filter(d => inSec(d.employee)).length, noPin:actives.filter(e => !e.hasPin).length};
+}
+
+/* componentes de gráfico (HTML/CSS, funcionam sem internet e no tema claro/escuro) */
+function hbars(list, cls='', max=8){
+  if(!list.length) return '<p class="muted small" style="margin:0">Sem entregas no período.</p>';
+  const top = list.slice(0, max), m = Math.max(...top.map(x => x.v), 1);
+  return `<div class="hb ${cls}">${top.map(x => `<div class="r"><span class="l" title="${esc(x.l)}">${esc(x.l)}</span><span class="v">${nf(x.v)}</span><span class="t"><i style="width:${Math.max(1.5, x.v*100/m)}%"></i></span></div>`).join('')}</div>`;
+}
+function colsChart(dd){
+  const m = Math.max(...dd.months.map(x => x.v), 1), now = dd.t.slice(0,7), from = dd.from.slice(0,7);
+  return `<div class="cols" role="img" aria-label="Itens entregues por mês: ${esc(dd.months.map(x => x.full+' '+x.v).join(', '))}">${dd.months.map(x => `<div class="c${x.key < from ? ' out' : ''}${x.key===now ? ' now' : ''}" title="${esc(x.full)}: ${nf(x.v)} itens"><div class="bw"><em>${x.v ? nf(x.v) : ''}</em><i style="height:${x.v ? Math.max(1.5, x.v*100/m) : 0}%"></i></div><span>${esc(x.label)}</span></div>`).join('')}</div>`;
+}
+const stat = (v, l, k='', txt=false) => `<div class="stat ${k}"><b class="${txt?'txt':''}">${txt ? esc(v) : v}</b><span>${esc(l)}</span></div>`;
+
+/* seções: as mesmas no dashboard e nos slides */
+function dashSections(dd){
+  const S = [];
+  S.push({id:'kpi', t:'O período em números', sub:`${dd.periodName}: ${dd.rangeLabel}${dd.sector ? ' · setor '+dd.sector : ''}`, body:`<div class="kpis">
+    <div class="kpi"><b>${nf(dd.dels)}</b><span>Entregas</span><small>registradas no período</small></div>
+    <div class="kpi"><b>${nf(dd.items)}</b><span>Itens entregues</span><small>${dd.dels ? (dd.items/dd.dels).toLocaleString('pt-BR',{maximumFractionDigits:1})+' por entrega' : '—'}</small></div>
+    <div class="kpi"><b>${nf(dd.served)}</b><span>Trabalhadores atendidos</span><small>${pct(dd.served, dd.actives)}% dos ${nf(dd.actives)} ativos</small></div>
+    <div class="kpi"><b>${dd.dels ? pct(dd.confirmed, dd.dels)+'%' : '—'}</b><span>Confirmadas pelo trabalhador</span><small>${nf(dd.confirmed)} de ${nf(dd.dels)} entregas</small></div></div>`});
+  S.push({id:'mes', span:true, t:'Itens entregues por mês', sub:`Últimos 12 meses · ${nf(dd.months.reduce((a,x)=>a+x.v,0))} itens${dd.sector ? ' · setor '+dd.sector : ''}`, body:colsChart(dd)});
+  S.push({id:'top', t:'EPIs mais entregues', sub:`Quantidade no período${dd.topEpis.length > 8 ? ' · 8 primeiros de '+dd.topEpis.length : ''}`, body:hbars(dd.topEpis)});
+  S.push({id:'grp', t: dd.sector ? `Consumo por função em ${dd.sector}` : 'Consumo por setor', sub:'Itens entregues no período', body:hbars(dd.groups, 'blue')});
+  const ruleHint = dd.noRule === dd.episN ? '<p class="dnote">Nenhum EPI tem regra de uso ainda. Defina em EPIs › Regras de uso para acompanhar as trocas fora do prazo.</p>' : '';
+  S.push({id:'early', t:'Trocas fora do prazo', sub:'Entregas antes do prazo mínimo de uso de cada EPI', body:`
+    <div class="statrow">${stat(nf(dd.early), 'itens trocados antes do prazo', dd.early ? 'red' : 'ok')}${stat(dd.items ? pct(dd.early, dd.items)+'%' : '—', 'do total entregue', dd.early ? 'amber' : '')}${stat(dd.causes[0] ? dd.causes[0].l : 'Nenhuma', 'motivo mais comum', '', true)}</div>
+    ${dd.early ? `<div class="split"><div>${hbars(dd.causes, 'red', 6)}</div><div><p class="small muted" style="margin:0 0 8px">EPIs com mais trocas antecipadas</p>${hbars(dd.earlyEpis, 'red', 5)}</div></div>` : '<p class="muted small" style="margin:0">Nenhuma troca fora do prazo no período.</p>'}${ruleHint}`});
+  S.push({id:'prazo', t:'Prazos de uso', sub:'Situação hoje dos trabalhadores ativos', body:`
+    <div class="statrow">${stat(nf(dd.due.length), 'trocas liberadas (prazo cumprido)', dd.due.length ? 'ok' : '')}${stat(nf(dd.soon.length), 'liberam nos próximos 30 dias', dd.soon.length ? 'amber' : '')}${stat(nf(dd.noRule), `EPIs sem regra (de ${dd.episN})`, dd.noRule ? 'red' : 'ok')}</div>
+    ${dd.soon.length ? `<div class="tscroll"><table class="t"><tr><th>Trabalhador</th><th>EPI</th><th>Liberada em</th></tr>${dd.soon.slice(0,6).map(x => `<tr><td>${esc(x.emp?.name||'—')}</td><td>${esc(x.e.description)}</td><td>${fmtDate(x.u.next)}</td></tr>`).join('')}</table></div>${dd.soon.length > 6 ? `<p class="dnote">e mais ${dd.soon.length-6}.</p>` : ''}` : ''}`});
+  S.push({id:'conf', span:true, t:'Conformidade', sub:'Certificado de Aprovação, estoque e confirmações · situação hoje', body:`
+    <div class="statrow">${stat(nf(dd.caVenc), 'EPIs com CA vencido', dd.caVenc ? 'red' : 'ok')}${stat(nf(dd.caWarn), 'CA vence em até 60 dias', dd.caWarn ? 'amber' : 'ok')}${stat(nf(dd.pending), 'entregas sem confirmação', dd.pending ? 'amber' : 'ok')}</div>
+    <div class="statrow">${stat(nf(dd.noStock), 'EPIs sem saldo', dd.noStock ? 'red' : 'ok')}${stat(nf(dd.lowStock), 'EPIs com estoque baixo', dd.lowStock ? 'amber' : 'ok')}${stat(nf(dd.noPin), 'trabalhadores sem senha', dd.noPin ? 'amber' : 'ok')}</div>`});
+  return S;
+}
+
+VIEWS.dash = (r) => {
+  const p = r.p || '12m', s = r.s || '';
+  const ready = loaded.has('deliveries') && loaded.has('epis') && loaded.has('employees');
+  const dd = dashData(p, s), S = dashSections(dd), secs = sectorsAll();
+  const panel = x => `<section class="dpanel${x.span ? ' span2' : ''}"><h3>${esc(x.t)}</h3><p class="lead">${esc(x.sub)}</p>${x.body}</section>`;
+  return { title:'Dashboard', wide:true, html:`
+    <div class="dhead"><div class="grow"><h2>${esc(D.company.name || 'Gestão de EPIs')}</h2><div class="small muted">${esc(dd.rangeLabel)}${s ? ' · '+esc(s) : ''}</div></div>
+      <button class="btn presbtn" id="present">${ICON.play} Apresentar</button></div>
+    <div class="dbar"><div class="filters" role="group" aria-label="Período">${PERIODS.map(([k,l]) => `<button data-p="${k}" aria-pressed="${p===k}">${l}</button>`).join('')}</div>
+      ${secs.length ? `<select id="sec" aria-label="Setor"><option value="">Todos os setores</option>${secs.map(x => `<option ${x===s?'selected':''}>${esc(x)}</option>`).join('')}</select>` : ''}</div>
+    ${!ready ? '<p class="small muted">Carregando dados…</p>' : ''}
+    ${S[0].body}
+    <div class="dgrid">${S.slice(1).map(panel).join('')}</div>
+    <p class="small muted" style="margin-top:14px">Atualiza sozinho quando houver novas entregas. Use <b>Apresentar</b> para a tela cheia: setas do teclado ou deslizar o dedo trocam os slides.</p>`,
+    after(){
+      $$('[data-p]').forEach(b => b.onclick = () => { r.p = b.dataset.p; render(); });
+      $('#sec') && ($('#sec').onchange = ev => { r.s = ev.target.value; render(); });
+      $('#present').onclick = () => openPres(r);
+    }};
+};
+
+/* ---------- modo apresentação ---------- */
+let PRES = null;
+const LOGO_SVG = '<svg viewBox="0 0 48 48" aria-hidden="true" style="stroke:none"><path d="M24 3l19 7v13c0 11-8 19-19 22C13 42 5 34 5 23V10z" style="fill:#f2b705"/><path d="M24 9l13 5v9c0 8-5 14-13 16-8-2-13-8-13-16v-9z" style="fill:#1a1c1e"/><path d="M14 27c0-6 4-10 10-10s10 4 10 10" style="fill:none;stroke:#f2b705;stroke-width:3.4"/><path d="M12 27h24" style="fill:none;stroke:#f2b705;stroke-width:3.4;stroke-linecap:round"/><path d="M24 17v-3" style="fill:none;stroke:#f2b705;stroke-width:3.4;stroke-linecap:round"/></svg>';
+function presSlides(){
+  const dd = dashData(PRES.r.p || '12m', PRES.r.s || ''), S = dashSections(dd);
+  const cover = {cover:true, html:`<div class="cover">${LOGO_SVG}<h1>${esc(D.company.name || 'SG-EPI')}</h1><p class="what">Gestão e controle de EPIs${dd.sector ? ' · '+esc(dd.sector) : ''}</p><p class="per">${esc(dd.periodName)}: ${esc(dd.rangeLabel)}<br>Dados de ${new Date().toLocaleString('pt-BR',{timeZone:TZ, dateStyle:'long', timeStyle:'short'})}</p></div>`};
+  return [cover, ...S];
+}
+function drawPres(){
+  if(!PRES) return;
+  const sl = presSlides(); PRES.n = sl.length; PRES.i = Math.max(0, Math.min(PRES.i, sl.length-1));
+  const x = sl[PRES.i];
+  PRES.el.innerHTML = `<div class="stripe"></div>
+    <div class="stage"><div class="slide" ${PRES.anim ? '' : 'style="animation:none"'}>${x.cover ? x.html : `<h2 class="st">${esc(x.t)}</h2><p class="sub">${esc(x.sub)}</p><div class="body">${x.body}</div>`}</div></div>
+    <div class="foot">
+      <button data-pa="close" aria-label="Fechar apresentação"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <button data-pa="prev" aria-label="Slide anterior" ${PRES.i===0?'disabled':''}><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="prog" aria-hidden="true">${sl.map((_,k) => `<i class="${k===PRES.i?'on':k<PRES.i?'done':''}"></i>`).join('')}</div>
+      <span class="count" aria-live="polite">${PRES.i+1} / ${sl.length}</span>
+      <button data-pa="next" aria-label="Próximo slide"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+      <button data-pa="auto" aria-pressed="${!!PRES.timer}" title="Passar sozinho a cada 12 segundos">${ICON.play.replace(' width="20" height="20"','')}<span>Auto</span></button>
+    </div>`;
+  PRES.anim = false;
+  PRES.el.querySelectorAll('[data-pa]').forEach(b => b.onclick = () => { const a = b.dataset.pa; if(a==='close') closePres(); else if(a==='prev') presGo(-1); else if(a==='next') presGo(1); else presAuto(); });
+}
+function presGo(d){ if(!PRES) return; const n = PRES.n || 1; PRES.i = PRES.timer ? (PRES.i + d + n) % n : Math.max(0, Math.min(n-1, PRES.i + d)); PRES.anim = true; drawPres(); }
+function presAuto(){ if(!PRES) return; if(PRES.timer){ clearInterval(PRES.timer); PRES.timer = null; } else PRES.timer = setInterval(() => presGo(1), 12000); drawPres(); }
+function presKey(ev){
+  if(!PRES) return;
+  if(['ArrowRight','PageDown',' ','Enter'].includes(ev.key)){ ev.preventDefault(); presGo(1); }
+  else if(['ArrowLeft','PageUp','Backspace'].includes(ev.key)){ ev.preventDefault(); presGo(-1); }
+  else if(ev.key==='Home'){ PRES.i = 0; PRES.anim = true; drawPres(); }
+  else if(ev.key==='Escape' && !document.fullscreenElement) closePres();
+  else if(ev.key==='p' || ev.key==='P') presAuto();
+}
+function openPres(r){
+  if(PRES) return;
+  const el = document.createElement('div'); el.className = 'pres'; el.setAttribute('role','dialog'); el.setAttribute('aria-modal','true'); el.setAttribute('aria-label','Apresentação de indicadores de EPI');
+  document.body.appendChild(el);
+  PRES = {el, r, i:0, n:1, timer:null, anim:true};
+  history.pushState({pres:1}, '');
+  drawPres();
+  document.addEventListener('keydown', presKey);
+  let x0 = null, y0 = null;
+  el.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive:true});
+  el.addEventListener('touchend', e => { if(x0 === null) return; const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; if(Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)*1.3) presGo(dx < 0 ? 1 : -1); x0 = null; }, {passive:true});
+  try{ const de = document.documentElement; if(de.requestFullscreen && !document.fullscreenElement) de.requestFullscreen().then(() => { try{ screen.orientation.lock('landscape').catch(()=>{}); }catch(e){} }).catch(()=>{}); }catch(e){}
+  audit('dashboard.apresentacao', 'dashboard', `${(PERIODS.find(x=>x[0]===(r.p||'12m'))||['',''])[1]}${r.s ? ' · '+r.s : ''}`);
+}
+function closePres(fromPop){
+  if(!PRES) return;
+  if(!fromPop){ history.back(); return; }   // o popstate chama closePres(true)
+  if(PRES.timer) clearInterval(PRES.timer);
+  PRES.el.remove(); PRES = null;
+  document.removeEventListener('keydown', presKey);
+  try{ screen.orientation && screen.orientation.unlock && screen.orientation.unlock(); }catch(e){}
+  try{ if(document.fullscreenElement) document.exitFullscreen().catch(()=>{}); }catch(e){}
+}
 
 boot();
 
